@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio barber</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Caio barber
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="hero">
+            <h1>Caio barber</h1>
+            <p>A melhor experiência de barbearia que você pode ter. Venha nos visitar e transforme seu visual.</p>
+            <a href="#servicos" class="cta-button">Nossos Serviços</a>
+        </div>
+    </section>
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="services">
+            <div class="service">
+                <i class="fas fa-cut"></i>
+                <h3>Corte Simples</h3>
+                <p>Descrição do corte simples.</p>
+                <p class="service-price">R$ 30,00</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-hand-scissors"></i> <!-- Ícone para Corte Navalha -->
+                <h3>Corte Navalha</h3>
+                <p>Descrição do corte navalha.</p>
+                <p class="service-price">R$ 50,00</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-mug-hot"></i> <!-- Ícone para Barba Simples -->
+                <h3>Barba Simples</h3>
+                <p>Descrição do serviço de barba simples.</p>
+                <p class="service-price">R$ 20,00</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-spa"></i>
+                <h3>Pacote Completo</h3>
+                <p>Descrição do pacote completo.</p>
+                <p class="service-price">R$ 80,00</p>
+            </div>
+        </div>
+    </section>
+    <section id="agendamento">
+        <h2>Agende seu Horário</h2>
+        <div class="contact-form">
+            <h3>Formulário de Agendamento</h3>
+            <form id="agendamento-form" onsubmit="enviarAgendamento(); return false;">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                
+                <label for="horario">Horário:</label>
+                <input type="datetime-local" id="horario" name="horario" required>
+                
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="corte-simples">Corte Simples - R$ 30,00</option>
+                    <option value="corte-navalha">Corte Navalha - R$ 50,00</option>
+                    <option value="barba-simples">Barba Simples - R$ 20,00</option>
+                    <option value="pacote-completo">Pacote Completo - R$ 80,00</option>
+                </select>
+                
+                <label for="barbeiro">Barbeiro:</label>
+                <select id="barbeiro" name="barbeiro" required>
+                    <option value="caio">Caio</option>
+                    <option value="joao">João</option>
+                    <option value="maria">Maria</option>
+                </select>
+                
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+    </section>
+    <a href="https://api.whatsapp.com/send?phone=5583987377716" class="whatsapp-button" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contact-info">
+            <p>Rua L, Mangabeira, Feira De Santana BA, 44037-000, Brasil</p>
+            <p>Telefone: (75) 8222-8791</p>
+            <p>Email: contato@caio-barber.com.br</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
